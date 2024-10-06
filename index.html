@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Fungsi untuk mendapatkan nilai SubID dari URL
+        function getQueryParameter(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Ambil SubID dari URL
+        let subid = getQueryParameter('subid') || 'default_subid';
+
+        // URL tujuan redirect
+        let redirectUrl = "https://wwp.hxbvnd.com/redirect-zone/12327b37?subid=" + encodeURIComponent(subid);
+
+        // Redirect ke URL tujuan
+        window.location.href = redirectUrl;
+    </script>
+</head>
+<body>
+    <p>Redirecting you to the target page...</p>
+</body>
+</html>
